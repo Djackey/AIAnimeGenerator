@@ -4,12 +4,11 @@ note: This project was started with love by [Trecia](https://github.com/TreciaKS
 
 ![demo-site](https://user-images.githubusercontent.com/6153188/231865321-0da5e81f-4832-4cce-bcd1-ecd79e9b9cc3.gif)
 
-
 ## Hello Strapi
 
 Strapi Community Edition is a free and open-source headless CMS enabling you to manage any content, anywhere.
 
-- **Self-hosted or Cloud**: You can host and scale Strapi projects the way you want. You can save time by deploying to [Strapi Cloud](https://cloud.strapi.io/signups?source=github1) or deploy to the hosting platform you want**: AWS, Azure, Google Cloud, DigitalOcean.
+- **Self-hosted or Cloud**: You can host and scale Strapi projects the way you want. You can save time by deploying to [Strapi Cloud](https://cloud.strapi.io/signups?source=github1) or deploy to the hosting platform you want\*\*: AWS, Azure, Google Cloud, DigitalOcean.
 - **Modern Admin Pane**: Elegant, entirely customizable and a fully extensible admin panel.
 - **Multi-database support**: You can choose the database you prefer: PostgreSQL, MySQL, MariaDB, and SQLite.
 - **Customizable**: You can quickly build your logic by fully customizing APIs, routes, or plugins to fit your needs perfectly.
@@ -27,7 +26,6 @@ Strapi Community Edition is a free and open-source headless CMS enabling you to 
 - **GraphQL or REST**: Consume the API using REST or GraphQL
 
 You can unlock additional features such as SSO, Audit Logs, Review Workflows in [Strapi Cloud](https://cloud.strapi.io/login?source=github1) or [Strapi Enterprise](https://strapi.io/enterprise?source=github1).
-
 
 ## Getting Started
 
@@ -187,6 +185,7 @@ You can find the setting inside the `package.json` file inside the root folder.
   }
 }
 ```
+
 Go to the root folder and install the package, `yarn`
 You can start both apps by running `yarn dev`.
 
@@ -325,10 +324,13 @@ yarn repo:upstream
 ## FAQ
 
 ### How do I add additional pages?
+
 Check out [this video](https://youtu.be/EoVrTNA3geM) where I will guide on how to do this.
 
 ### How do I update my Strapi version?
+
 Check out this [this issue comment](https://github.com/strapi/nextjs-corporate-starter/issues/17#issuecomment-1558149967)
 
-#   A I A n i m e G e n e r a t o r  
+#   A I A n i m e G e n e r a t o r 
+ 
  

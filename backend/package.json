@@ -1,5 +1,5 @@
 {
-  "name": "corporate-blog-template",
+  "name": "backend",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -7,16 +7,16 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "deploy": "strapi deploy"
   },
   "devDependencies": {},
   "dependencies": {
-    "@strapi/plugin-cloud": "4.20.4",
-    "@strapi/plugin-i18n": "4.20.4",
-    "@strapi/plugin-seo": "^1.9.8",
-    "@strapi/plugin-users-permissions": "4.20.4",
-    "@strapi/strapi": "4.20.4",
-    "better-sqlite3": "8.6.0",
+    "@strapi/strapi": "4.25.4",
+    "@strapi/plugin-users-permissions": "4.25.4",
+    "@strapi/plugin-i18n": "4.25.4",
+    "@strapi/plugin-cloud": "4.25.4",
+    "pg": "8.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
@@ -26,7 +26,7 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "0f95dc7c-202b-4ab2-a874-3799d23b1640"
+    "uuid": "e852a7b6-48cb-4954-8238-474bba889bf7"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
