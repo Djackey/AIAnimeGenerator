@@ -1,5 +1,17 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface MetaMetadata extends Schema.Component {
+  collectionName: 'components_meta_metadata';
+  info: {
+    displayName: 'Seo';
+    description: '';
+  };
+  attributes: {
+    metaTitle: Attribute.String & Attribute.Required;
+    metaDescription: Attribute.Text & Attribute.Required;
+  };
+}
+
 export interface SectionsRichText extends Schema.Component {
   collectionName: 'components_sections_rich_texts';
   info: {
@@ -31,18 +43,6 @@ export interface SectionsHeading extends Schema.Component {
   attributes: {
     heading: Attribute.String & Attribute.Required;
     description: Attribute.String;
-  };
-}
-
-export interface MetaMetadata extends Schema.Component {
-  collectionName: 'components_meta_metadata';
-  info: {
-    displayName: 'Seo';
-    description: '';
-  };
-  attributes: {
-    metaTitle: Attribute.String & Attribute.Required;
-    metaDescription: Attribute.Text & Attribute.Required;
   };
 }
 
@@ -109,10 +109,10 @@ export interface LayoutFooter extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'meta.metadata': MetaMetadata;
       'sections.rich-text': SectionsRichText;
       'sections.hero': SectionsHero;
       'sections.heading': SectionsHeading;
-      'meta.metadata': MetaMetadata;
       'links.link': LinksLink;
       'links.button-link': LinksButtonLink;
       'layout.navbar': LayoutNavbar;

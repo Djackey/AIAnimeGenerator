@@ -1,7 +1,18 @@
+'use strict';
+
 /**
- * page router
+ * page router.
  */
 
-import { factories } from '@strapi/strapi';
+const { createCoreRouter } = require('@strapi/strapi').factories;
 
-export default factories.createCoreRouter('api::page.page');
+module.exports = createCoreRouter('api::page.page', {
+  config: {
+    find: {
+      middlewares: ["api::page.page-populate-middleware"]
+    },
+    findOne: {
+      middlewares: ["api::page.page-populate-middleware"]
+    },
+  }
+});
