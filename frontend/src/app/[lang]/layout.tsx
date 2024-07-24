@@ -6,7 +6,7 @@ import { fetchAPI } from "./utils/fetch-api";
 import { i18n } from "../../../i18n-config";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import {FALLBACK_SEO} from "@/app/[lang]/utils/constants";
 
 
@@ -20,12 +20,12 @@ async function getGlobal(lang: string): Promise<any> {
 
   const urlParamsObject = {
     populate: [
-      // "metadata.shareImage",
+      "metadata",
       "favicon",
       // "notificationBanner.link",
       "navbar.links",
       "navbar.navbarLogo.logoImg",
-      // "footer.footerLogo.logoImg",
+      "footer.footerLogo.logoImg",
       // "footer.menuLinks",
       // "footer.legalLinks",
       // "footer.socialLinks",
@@ -33,8 +33,20 @@ async function getGlobal(lang: string): Promise<any> {
     ],
     locale: lang,
   };
-  return await fetchAPI(path, urlParamsObject, options);
+
+  // Log the function parameters
+  // console.log(`getGlobal - lang: ${lang}`);
+  // console.log(`getGlobal - urlParamsObject: ${JSON.stringify(urlParamsObject)}`);
+  // console.log(`getGlobal - options: ${JSON.stringify(options)}`);
+
+  const data = await fetchAPI(path, urlParamsObject, options);
+
+  // Log the returned data
+  // console.log(`getGlobal - data: ${JSON.stringify(data)}`);
+
+  return data;
 }
+
 
 export async function generateMetadata({ params } : { params: {lang: string}}): Promise<Metadata> {
   const meta = await getGlobal(params.lang);
@@ -64,20 +76,20 @@ export default async function RootLayout({
   // TODO: CREATE A CUSTOM ERROR PAGE
   if (!global.data) return null;
   
-  const { notificationBanner, navbar, footer } = global.data.attributes;
+  const { navbar, footer } = global.data.attributes;
 
   const navbarLogoUrl = getStrapiMedia(
     navbar.navbarLogo.logoImg.data?.attributes.url
   );
 
-  const footerLogoUrl = getStrapiMedia(
-    footer.footerLogo.logoImg.data?.attributes.url
-  );
+  // const footerLogoUrl = getStrapiMedia(
+  //   footer.footerLogo.logoImg.data?.attributes.url
+  // );
 
   return (
     <html lang={params.lang}>
       <body>
-        <Navbar
+        <Header
           links={navbar.links}
           logoUrl={navbarLogoUrl}
           logoText={navbar.navbarLogo.logoText}

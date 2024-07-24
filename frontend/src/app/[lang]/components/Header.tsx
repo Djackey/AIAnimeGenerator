@@ -54,7 +54,7 @@ function MobileNavLink({ url, text, closeMenu }: MobileNavLink) {
   );
 }
 
-export default function Navbar({
+export default function Header({
   links,
   logoUrl,
   logoText,
