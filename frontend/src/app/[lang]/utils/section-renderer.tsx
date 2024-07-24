@@ -8,6 +8,10 @@ import Email from "../components/Email";
 
 export function sectionRenderer(section: any, index: number) {
   switch (section.__component) {
+
+    case "sections.heading":
+      return <h1 className="pt-6 text-2xl lg:text-4xl text-gray-900">{section.heading}</h1>;
+
     case "sections.rich-text":
       return <RichText key={index} data={section} />;
 

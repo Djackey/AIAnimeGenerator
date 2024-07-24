@@ -1,0 +1,13 @@
+@baseUri=http://localhost:1337/api
+@API_TOKEN=58e2056e0f32038e7cb2179bfba3c80cdb2f039e59f472b29712dfb49b1968f321a6051dfa23362a86acc52cf3d68ff0618fc459ebe8421cc9b9fa07149d866768002dafc82fecbb7368dc6e552b70553834eeae6c2c96a1c87c6656842a24d2e557ffd736697b573b5343f04fb812f9cabe3d5f6e738b96b6a8e1d3c271991f
+
+### get pages
+GET {{baseUri}}/pages?populate=*
+Authorization: Bearer {{API_TOKEN}}
+
+
+
+
+### get global
+GET {{baseUri}}/global?populate=*
+Authorization: Bearer {{API_TOKEN}}
