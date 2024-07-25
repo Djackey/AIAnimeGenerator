@@ -794,6 +794,7 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
     singularName: 'global';
     pluralName: 'globals';
     displayName: 'Global';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -823,7 +824,7 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
           localized: true;
         };
       }>;
-    footer: Attribute.Component<'layout.footer', true> &
+    footer: Attribute.Component<'layout.footer'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

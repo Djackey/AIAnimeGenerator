@@ -26,8 +26,8 @@ async function getGlobal(lang: string): Promise<any> {
       "navbar.links",
       "navbar.navbarLogo.logoImg",
       "footer.footerLogo.logoImg",
-      // "footer.menuLinks",
-      // "footer.legalLinks",
+      "footer.menuLinks",
+      "footer.legalLinks",
       // "footer.socialLinks",
       // "footer.categories",
     ],
@@ -82,9 +82,9 @@ export default async function RootLayout({
     navbar.navbarLogo.logoImg.data?.attributes.url
   );
 
-  // const footerLogoUrl = getStrapiMedia(
-  //   footer.footerLogo.logoImg.data?.attributes.url
-  // );
+  const footerLogoUrl = getStrapiMedia(
+    footer.footerLogo.logoImg.data?.attributes.url
+  );
 
   return (
     <html lang={params.lang}>
@@ -98,6 +98,13 @@ export default async function RootLayout({
         <main className="container  mx-auto dark:bg-black dark:text-gray-100 min-h-screen">
           {children}
         </main>
+
+        <Footer
+          logoUrl={footerLogoUrl}
+          logoText={footer.footerLogo.logoText}
+          menuLinks={footer.menuLinks}
+          legalLinks={footer.legalLinks}
+        />
       </body>
     </html>
   );

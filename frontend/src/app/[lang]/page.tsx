@@ -26,11 +26,13 @@ export default async function RootRoute({ params }: { params: { lang: string } }
             return null;
         }
 
-        const contentSections = page.data[0].attributes.contentSections;
-        // console.log(`contentSections: ${JSON.stringify(contentSections)}`);
-
+        const pageAttributes = page.data[0].attributes;  // 获取页面的顶级属性
+        const contentSections = pageAttributes.contentSections;
+        const updatedAt = pageAttributes.updatedAt;  // 从页面属性获取更新日期
+        
+        // 使用更新日期调用 sectionRenderer
         return contentSections.map((section: any, index: number) =>
-            sectionRenderer(section, index)
+            sectionRenderer(section, index, updatedAt)  // 传递 updatedAt 至 renderer
         );
     } catch (error: any) {
         console.error('Error:', error);

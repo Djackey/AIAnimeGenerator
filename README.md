@@ -330,195 +330,394 @@ Check out [this video](https://youtu.be/EoVrTNA3geM) where I will guide on how t
 ### How do I update my Strapi version?
 
 Check out this [this issue comment](https://github.com/strapi/nextjs-corporate-starter/issues/17#issuecomment-1558149967)
-
-#   A I A n i m e G e n e r a t o r 
- 
- 
-
-```
 ai-anime-generator
 ├─ backend
-│  ├─ .editorconfig
-│  ├─ .env
-│  ├─ .env.example
-│  ├─ .gitignore
-│  ├─ .strapi
-│  │  └─ client
-│  │     ├─ app.js
-│  │     └─ index.html
-│  ├─ .strapi-updater.json
-│  ├─ .tmp
-│  ├─ config
-│  │  ├─ admin.ts
-│  │  ├─ api.ts
-│  │  ├─ database.ts
-│  │  ├─ middlewares.ts
-│  │  ├─ plugins.ts
-│  │  └─ server.ts
-│  ├─ database
-│  │  └─ migrations
-│  │     └─ .gitkeep
-│  ├─ dist
-│  │  ├─ config
-│  │  │  ├─ admin.js
-│  │  │  ├─ api.js
-│  │  │  ├─ database.js
-│  │  │  ├─ middlewares.js
-│  │  │  ├─ plugins.js
-│  │  │  └─ server.js
-│  │  └─ src
-│  │     ├─ api
-│  │     │  ├─ global
-│  │     │  │  ├─ content-types
-│  │     │  │  │  └─ global
-│  │     │  │  │     └─ schema.json
-│  │     │  │  ├─ controllers
-│  │     │  │  │  └─ global.js
-│  │     │  │  ├─ routes
-│  │     │  │  │  └─ global.js
-│  │     │  │  └─ services
-│  │     │  │     └─ global.js
-│  │     │  └─ page
-│  │     │     ├─ content-types
-│  │     │     │  └─ page
-│  │     │     │     └─ schema.json
-│  │     │     ├─ controllers
-│  │     │     │  └─ page.js
-│  │     │     ├─ routes
-│  │     │     │  └─ page.js
-│  │     │     └─ services
-│  │     │        └─ page.js
-│  │     ├─ components
-│  │     │  ├─ layout
-│  │     │  │  ├─ footer.json
-│  │     │  │  ├─ logo.json
-│  │     │  │  └─ navbar.json
-│  │     │  ├─ links
-│  │     │  │  ├─ button-link.json
-│  │     │  │  └─ link.json
-│  │     │  ├─ meta
-│  │     │  │  └─ metadata.json
-│  │     │  └─ sections
-│  │     │     ├─ heading.json
-│  │     │     ├─ hero.json
-│  │     │     └─ rich-text.json
-│  │     └─ index.js
-│  ├─ favicon.png
-│  ├─ package.json
-│  ├─ public
-│  │  ├─ robots.txt
-│  │  └─ uploads
-│  ├─ README.md
-│  ├─ src
-│  │  ├─ admin
-│  │  │  ├─ app.example.tsx
-│  │  │  ├─ tsconfig.json
-│  │  │  └─ webpack.config.example.js
-│  │  ├─ api
-│  │  │  ├─ .gitkeep
-│  │  │  ├─ global
-│  │  │  │  ├─ content-types
-│  │  │  │  │  └─ global
-│  │  │  │  │     └─ schema.json
-│  │  │  │  ├─ controllers
-│  │  │  │  │  └─ global.ts
-│  │  │  │  ├─ routes
-│  │  │  │  │  └─ global.ts
-│  │  │  │  └─ services
-│  │  │  │     └─ global.ts
-│  │  │  └─ page
-│  │  │     ├─ content-types
-│  │  │     │  └─ page
-│  │  │     │     └─ schema.json
-│  │  │     ├─ controllers
-│  │  │     │  └─ page.ts
-│  │  │     ├─ routes
-│  │  │     │  └─ page.ts
-│  │  │     └─ services
-│  │  │        └─ page.ts
-│  │  ├─ components
-│  │  │  ├─ layout
-│  │  │  │  ├─ footer.json
-│  │  │  │  ├─ logo.json
-│  │  │  │  └─ navbar.json
-│  │  │  ├─ links
-│  │  │  │  ├─ button-link.json
-│  │  │  │  └─ link.json
-│  │  │  ├─ meta
-│  │  │  │  └─ metadata.json
-│  │  │  └─ sections
-│  │  │     ├─ heading.json
-│  │  │     ├─ hero.json
-│  │  │     └─ rich-text.json
-│  │  ├─ extensions
-│  │  │  └─ .gitkeep
-│  │  └─ index.ts
-│  ├─ tsconfig.json
-│  ├─ types
-│  │  └─ generated
-│  │     ├─ components.d.ts
-│  │     └─ contentTypes.d.ts
-│  └─ yarn.lock
+│ ├─ .editorconfig
+│ ├─ .env
+│ ├─ .env.example
+│ ├─ .gitignore
+│ ├─ .strapi
+│ │ └─ client
+│ │ ├─ app.js
+│ │ └─ index.html
+│ ├─ .strapi-updater.json
+│ ├─ .tmp
+│ ├─ config
+│ │ ├─ admin.ts
+│ │ ├─ api.ts
+│ │ ├─ database.ts
+│ │ ├─ middlewares.ts
+│ │ ├─ plugins.ts
+│ │ └─ server.ts
+│ ├─ database
+│ │ └─ migrations
+│ │ └─ .gitkeep
+│ ├─ dist
+│ │ ├─ config
+│ │ │ ├─ admin.js
+│ │ │ ├─ api.js
+│ │ │ ├─ database.js
+│ │ │ ├─ middlewares.js
+│ │ │ ├─ plugins.js
+│ │ │ └─ server.js
+│ │ └─ src
+│ │ ├─ api
+│ │ │ ├─ global
+│ │ │ │ ├─ content-types
+│ │ │ │ │ └─ global
+│ │ │ │ │ └─ schema.json
+│ │ │ │ ├─ controllers
+│ │ │ │ │ └─ global.js
+│ │ │ │ ├─ routes
+│ │ │ │ │ └─ global.js
+│ │ │ │ └─ services
+│ │ │ │ └─ global.js
+│ │ │ └─ page
+│ │ │ ├─ content-types
+│ │ │ │ └─ page
+│ │ │ │ └─ schema.json
+│ │ │ ├─ controllers
+│ │ │ │ └─ page.js
+│ │ │ ├─ routes
+│ │ │ │ └─ page.js
+│ │ │ └─ services
+│ │ │ └─ page.js
+│ │ ├─ components
+│ │ │ ├─ layout
+│ │ │ │ ├─ footer.json
+│ │ │ │ ├─ logo.json
+│ │ │ │ └─ navbar.json
+│ │ │ ├─ links
+│ │ │ │ ├─ button-link.json
+│ │ │ │ └─ link.json
+│ │ │ ├─ meta
+│ │ │ │ └─ metadata.json
+│ │ │ └─ sections
+│ │ │ ├─ heading.json
+│ │ │ ├─ hero.json
+│ │ │ └─ rich-text.json
+│ │ └─ index.js
+│ ├─ favicon.png
+│ ├─ package.json
+│ ├─ public
+│ │ ├─ robots.txt
+│ │ └─ uploads
+│ ├─ README.md
+│ ├─ src
+│ │ ├─ admin
+│ │ │ ├─ app.example.tsx
+│ │ │ ├─ tsconfig.json
+│ │ │ └─ webpack.config.example.js
+│ │ ├─ api
+│ │ │ ├─ .gitkeep
+│ │ │ ├─ global
+│ │ │ │ ├─ content-types
+│ │ │ │ │ └─ global
+│ │ │ │ │ └─ schema.json
+│ │ │ │ ├─ controllers
+│ │ │ │ │ └─ global.ts
+│ │ │ │ ├─ routes
+│ │ │ │ │ └─ global.ts
+│ │ │ │ └─ services
+│ │ │ │ └─ global.ts
+│ │ │ └─ page
+│ │ │ ├─ content-types
+│ │ │ │ └─ page
+│ │ │ │ └─ schema.json
+│ │ │ ├─ controllers
+│ │ │ │ └─ page.ts
+│ │ │ ├─ routes
+│ │ │ │ └─ page.ts
+│ │ │ └─ services
+│ │ │ └─ page.ts
+│ │ ├─ components
+│ │ │ ├─ layout
+│ │ │ │ ├─ footer.json
+│ │ │ │ ├─ logo.json
+│ │ │ │ └─ navbar.json
+│ │ │ ├─ links
+│ │ │ │ ├─ button-link.json
+│ │ │ │ └─ link.json
+│ │ │ ├─ meta
+│ │ │ │ └─ metadata.json
+│ │ │ └─ sections
+│ │ │ ├─ heading.json
+│ │ │ ├─ hero.json
+│ │ │ └─ rich-text.json
+│ │ ├─ extensions
+│ │ │ └─ .gitkeep
+│ │ └─ index.ts
+│ ├─ tsconfig.json
+│ ├─ types
+│ │ └─ generated
+│ │ ├─ components.d.ts
+│ │ └─ contentTypes.d.ts
+│ └─ yarn.lock
 ├─ frontend
-│  ├─ .env
-│  ├─ .eslintrc.json
-│  ├─ .gitignore
-│  ├─ i18n-config.ts
-│  ├─ next.config.mjs
-│  ├─ package-lock.json
-│  ├─ package.json
-│  ├─ postcss.config.mjs
-│  ├─ public
-│  │  ├─ next.svg
-│  │  └─ vercel.svg
-│  ├─ README.md
-│  ├─ src
-│  │  ├─ app
-│  │  │  └─ [lang]
-│  │  │     ├─ components
-│  │  │     │  ├─ ArticleSelect.tsx
-│  │  │     │  ├─ Banner.tsx
-│  │  │     │  ├─ Email.tsx
-│  │  │     │  ├─ Error.tsx
-│  │  │     │  ├─ Features.tsx
-│  │  │     │  ├─ Footer.tsx
-│  │  │     │  ├─ FormSubmit.tsx
-│  │  │     │  ├─ Hero.tsx
-│  │  │     │  ├─ HighlightedText.tsx
-│  │  │     │  ├─ ImageSlider.tsx
-│  │  │     │  ├─ LangRedirect.tsx
-│  │  │     │  ├─ Loader.tsx
-│  │  │     │  ├─ Logo.tsx
-│  │  │     │  ├─ Media.tsx
-│  │  │     │  ├─ Navbar.tsx
-│  │  │     │  ├─ PageHeader.tsx
-│  │  │     │  ├─ Pricing.tsx
-│  │  │     │  ├─ Quote.tsx
-│  │  │     │  ├─ RichText.tsx
-│  │  │     │  ├─ Testimonials.tsx
-│  │  │     │  └─ VideoEmbed.tsx
-│  │  │     ├─ error.tsx
-│  │  │     ├─ globals.css
-│  │  │     ├─ layout.tsx
-│  │  │     ├─ loading.tsx
-│  │  │     ├─ page.tsx
-│  │  │     └─ utils
-│  │  │        ├─ api-helpers.ts
-│  │  │        ├─ constants.ts
-│  │  │        ├─ fetch-api.tsx
-│  │  │        ├─ get-page-by-slug.ts
-│  │  │        ├─ model.ts
-│  │  │        ├─ post-renderer.tsx
-│  │  │        ├─ render-button-style.ts
-│  │  │        └─ section-renderer.tsx
-│  │  └─ middleware.ts
-│  ├─ tailwind.config.ts
-│  └─ tsconfig.json
+│ ├─ .env
+│ ├─ .eslintrc.json
+│ ├─ .gitignore
+│ ├─ i18n-config.ts
+│ ├─ next.config.mjs
+│ ├─ package-lock.json
+│ ├─ package.json
+│ ├─ postcss.config.mjs
+│ ├─ public
+│ │ ├─ next.svg
+│ │ └─ vercel.svg
+│ ├─ README.md
+│ ├─ src
+│ │ ├─ app
+│ │ │ └─ [lang]
+│ │ │ ├─ components
+│ │ │ │ ├─ ArticleSelect.tsx
+│ │ │ │ ├─ Banner.tsx
+│ │ │ │ ├─ Email.tsx
+│ │ │ │ ├─ Error.tsx
+│ │ │ │ ├─ Features.tsx
+│ │ │ │ ├─ Footer.tsx
+│ │ │ │ ├─ FormSubmit.tsx
+│ │ │ │ ├─ Hero.tsx
+│ │ │ │ ├─ HighlightedText.tsx
+│ │ │ │ ├─ ImageSlider.tsx
+│ │ │ │ ├─ LangRedirect.tsx
+│ │ │ │ ├─ Loader.tsx
+│ │ │ │ ├─ Logo.tsx
+│ │ │ │ ├─ Media.tsx
+│ │ │ │ ├─ Navbar.tsx
+│ │ │ │ ├─ PageHeader.tsx
+│ │ │ │ ├─ Pricing.tsx
+│ │ │ │ ├─ Quote.tsx
+│ │ │ │ ├─ RichText.tsx
+│ │ │ │ ├─ Testimonials.tsx
+│ │ │ │ └─ VideoEmbed.tsx
+│ │ │ ├─ error.tsx
+│ │ │ ├─ globals.css
+│ │ │ ├─ layout.tsx
+│ │ │ ├─ loading.tsx
+│ │ │ ├─ page.tsx
+│ │ │ └─ utils
+│ │ │ ├─ api-helpers.ts
+│ │ │ ├─ constants.ts
+│ │ │ ├─ fetch-api.tsx
+│ │ │ ├─ get-page-by-slug.ts
+│ │ │ ├─ model.ts
+│ │ │ ├─ post-renderer.tsx
+│ │ │ ├─ render-button-style.ts
+│ │ │ └─ section-renderer.tsx
+│ │ └─ middleware.ts
+│ ├─ tailwind.config.ts
+│ └─ tsconfig.json
 ├─ LICENSE
 ├─ package copy.json
 ├─ package-lock.json
 ├─ package.json
 ├─ README.md
 └─ yarn.lock
+
+```
+
+```
+
+ai-anime-generator
+├─ backend
+│ ├─ .editorconfig
+│ ├─ .env
+│ ├─ .env.example
+│ ├─ .gitignore
+│ ├─ .strapi
+│ │ └─ client
+│ │ ├─ app.js
+│ │ └─ index.html
+│ ├─ .strapi-updater.json
+│ ├─ .tmp
+│ ├─ config
+│ │ ├─ admin.ts
+│ │ ├─ api.ts
+│ │ ├─ database.ts
+│ │ ├─ middlewares.ts
+│ │ ├─ plugins.ts
+│ │ └─ server.ts
+│ ├─ database
+│ │ └─ migrations
+│ │ └─ .gitkeep
+│ ├─ dist
+│ │ ├─ config
+│ │ │ ├─ admin.js
+│ │ │ ├─ api.js
+│ │ │ ├─ database.js
+│ │ │ ├─ middlewares.js
+│ │ │ ├─ plugins.js
+│ │ │ └─ server.js
+│ │ └─ src
+│ │ ├─ api
+│ │ │ ├─ global
+│ │ │ │ ├─ content-types
+│ │ │ │ │ └─ global
+│ │ │ │ │ └─ schema.json
+│ │ │ │ ├─ controllers
+│ │ │ │ │ └─ global.js
+│ │ │ │ ├─ routes
+│ │ │ │ │ └─ global.js
+│ │ │ │ └─ services
+│ │ │ │ └─ global.js
+│ │ │ └─ page
+│ │ │ ├─ content-types
+│ │ │ │ └─ page
+│ │ │ │ └─ schema.json
+│ │ │ ├─ controllers
+│ │ │ │ └─ page.js
+│ │ │ ├─ middlewares
+│ │ │ │ └─ page-populate-middleware.js
+│ │ │ ├─ routes
+│ │ │ │ └─ page.js
+│ │ │ └─ services
+│ │ │ └─ page.js
+│ │ ├─ components
+│ │ │ ├─ layout
+│ │ │ │ ├─ footer.json
+│ │ │ │ ├─ logo.json
+│ │ │ │ └─ navbar.json
+│ │ │ ├─ links
+│ │ │ │ ├─ button-link.json
+│ │ │ │ └─ link.json
+│ │ │ ├─ meta
+│ │ │ │ └─ metadata.json
+│ │ │ └─ sections
+│ │ │ ├─ heading.json
+│ │ │ ├─ hero.json
+│ │ │ └─ rich-text.json
+│ │ └─ index.js
+│ ├─ favicon.png
+│ ├─ package.json
+│ ├─ public
+│ │ ├─ robots.txt
+│ ├─ README.md
+│ ├─ src
+│ │ ├─ admin
+│ │ │ ├─ app.example.tsx
+│ │ │ ├─ tsconfig.json
+│ │ │ └─ webpack.config.example.js
+│ │ ├─ api
+│ │ │ ├─ .gitkeep
+│ │ │ ├─ global
+│ │ │ │ ├─ content-types
+│ │ │ │ │ └─ global
+│ │ │ │ │ └─ schema.json
+│ │ │ │ ├─ controllers
+│ │ │ │ │ └─ global.ts
+│ │ │ │ ├─ routes
+│ │ │ │ │ └─ global.ts
+│ │ │ │ └─ services
+│ │ │ │ └─ global.ts
+│ │ │ └─ page
+│ │ │ ├─ content-types
+│ │ │ │ └─ page
+│ │ │ │ └─ schema.json
+│ │ │ ├─ controllers
+│ │ │ │ └─ page.ts
+│ │ │ ├─ middlewares
+│ │ │ │ └─ page-populate-middleware.ts
+│ │ │ ├─ routes
+│ │ │ │ └─ page.ts
+│ │ │ └─ services
+│ │ │ └─ page.ts
+│ │ ├─ components
+│ │ │ ├─ layout
+│ │ │ │ ├─ footer.json
+│ │ │ │ ├─ logo.json
+│ │ │ │ └─ navbar.json
+│ │ │ ├─ links
+│ │ │ │ ├─ button-link.json
+│ │ │ │ └─ link.json
+│ │ │ ├─ meta
+│ │ │ │ └─ metadata.json
+│ │ │ └─ sections
+│ │ │ ├─ heading.json
+│ │ │ ├─ hero.json
+│ │ │ └─ rich-text.json
+│ │ ├─ extensions
+│ │ │ └─ .gitkeep
+│ │ └─ index.ts
+│ ├─ tsconfig.json
+│ ├─ types
+│ │ └─ generated
+│ │ ├─ components.d.ts
+│ │ └─ contentTypes.d.ts
+│ └─ yarn.lock
+├─ frontend
+│ ├─ .env
+│ ├─ .eslintrc.json
+│ ├─ .gitignore
+│ ├─ app
+│ │ └─ [lang]
+│ │ └─ globals.css
+│ ├─ components.json
+│ ├─ debug
+│ │ └─ apitest.http
+│ ├─ i18n-config.ts
+│ ├─ next.config.mjs
+│ ├─ package-lock.json
+│ ├─ package.json
+│ ├─ postcss.config.mjs
+│ ├─ public
+│ │ ├─ next.svg
+│ │ └─ vercel.svg
+│ ├─ README.md
+│ ├─ src
+│ │ ├─ app
+│ │ │ └─ [lang]
+│ │ │ ├─ components
+│ │ │ │ ├─ ArticleSelect.tsx
+│ │ │ │ ├─ Banner.tsx
+│ │ │ │ ├─ Email.tsx
+│ │ │ │ ├─ Error.tsx
+│ │ │ │ ├─ Features.tsx
+│ │ │ │ ├─ Footer.tsx
+│ │ │ │ ├─ FormSubmit.tsx
+│ │ │ │ ├─ Header.tsx
+│ │ │ │ ├─ Hero.tsx
+│ │ │ │ ├─ HighlightedText.tsx
+│ │ │ │ ├─ ImageSlider.tsx
+│ │ │ │ ├─ LangRedirect.tsx
+│ │ │ │ ├─ Loader.tsx
+│ │ │ │ ├─ Logo.tsx
+│ │ │ │ ├─ Media.tsx
+│ │ │ │ ├─ PageHeader.tsx
+│ │ │ │ ├─ Pricing.tsx
+│ │ │ │ ├─ Quote.tsx
+│ │ │ │ ├─ RichText.tsx
+│ │ │ │ ├─ Testimonials.tsx
+│ │ │ │ ├─ ui
+│ │ │ │ └─ VideoEmbed.tsx
+│ │ │ ├─ error.tsx
+│ │ │ ├─ globals.css
+│ │ │ ├─ layout.tsx
+│ │ │ ├─ lib
+│ │ │ │ └─ utils
+│ │ │ │ ├─ ui
+│ │ │ │ └─ ui.ts
+│ │ │ ├─ loading.tsx
+│ │ │ ├─ page.tsx
+│ │ │ └─ utils
+│ │ │ ├─ api-helpers.ts
+│ │ │ ├─ constants.ts
+│ │ │ ├─ fetch-api.tsx
+│ │ │ ├─ get-page-by-slug.ts
+│ │ │ ├─ model.ts
+│ │ │ ├─ post-renderer.tsx
+│ │ │ ├─ render-button-style.ts
+│ │ │ └─ section-renderer.tsx
+│ │ └─ middleware.ts
+│ ├─ tailwind.config.js
+│ ├─ tailwind.config.ts
+│ └─ tsconfig.json
+├─ LICENSE
+├─ package-lock.json
+├─ package.json
+├─ README.md
+└─ yarn.lock
+
+```
 
 ```

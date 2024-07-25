@@ -3,10 +3,12 @@
     "frontend": "yarn dev --prefix ../frontend/",
     "backend": "yarn dev --prefix ../backend/",
     "clear": "cd frontend && rimraf .next && rimraf cache",
+    "clear-l": "cd frontend && rm -rf .next && rm -rf cache",
     "setup:frontend": "cd frontend && yarn",
     "setup:backend": "cd backend && yarn",
     "setup": "yarn install && yarn setup:frontend && yarn setup:backend",
     "dev": "yarn clear && concurrently \"cd frontend && yarn dev\" \"cd backend && yarn develop\"",
+    "dev-win": "yarn clear-win && concurrently \"cd frontend && yarn dev\" \"cd backend && yarn develop\"",
     "seed": "cd backend && yarn strapi import -f ../seed-data.tar.gz",
     "export": "cd backend && yarn strapi export --no-encrypt -f ../seed-data",
     "repo:upstream": "git fetch upstream && git merge upstream/main"
@@ -16,13 +18,17 @@
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^2.1.5",
     "@strapi/plugin-seo": "^1.9.9",
+    "@tailwindcss/typography": "^0.5.13",
     "@types/react": "^18.3.3",
+    "autoprefixer": "^10.4.19",
     "concurrently": "^8.2.2",
     "npm-check-updates": "^16.14.15",
+    "postcss": "^8.4.40",
     "qs": "^6.12.3",
     "react-markdown": "^9.0.1",
     "remark-gfm": "^4.0.0",
-    "rimraf": "^5.0.0"
+    "rimraf": "^5.0.0",
+    "tailwindcss": "^3.4.6"
   },
   "devDependencies": {
     "@types/negotiator": "^0.6.3",

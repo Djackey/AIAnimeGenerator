@@ -1,4 +1,5 @@
 import RichText from "../components/RichText";
+import ArticleHeading from "../components/index/ArticleHeading"
 
 import Hero from "../components/Hero";
 import Features from "../components/Features";
@@ -6,11 +7,11 @@ import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
 import Email from "../components/Email";
 
-export function sectionRenderer(section: any, index: number) {
+export function sectionRenderer(section: any, index: number, updatedAt: string) {
   switch (section.__component) {
-
+    
     case "sections.heading":
-      return <h1 className="pt-6 text-2xl lg:text-4xl text-gray-900">{section.heading}</h1>;
+      return <ArticleHeading key={index} data={{ heading: section.heading, updatedAt: updatedAt }} />;
 
     case "sections.rich-text":
       return <RichText key={index} data={section} />;
